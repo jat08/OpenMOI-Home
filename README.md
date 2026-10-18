@@ -1,17 +1,25 @@
-# open_moi_home
+# OpenMOI-Home PWA
 
-A new Flutter project.
+An open-source, Progressive Web App (PWA) portal for **OpenMOI** — designed for measuring Moment of Inertia (MOI), Swing Weight (SW), and Twist Weight (TW) of sports equipment (pickleball paddles, tennis racquets) using smartphone motion sensors.
 
-## Getting Started
+Styled with Samsung **One UI 9.0** design principles.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Navigation & Features
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+1. **Overview Page**: Full project overview, primary use cases (paddle/racquet measurement, weight tuning, quality control, zero-hardware sensor timing), and key technical features (sine-wave curve fitting, SW/TW physics calculations, $\kappa$ calibration, tare zeroing, outlier management, and session group management).
+2. **Android Page**: Highlights the benefits of the native Android version (**better hardware utilization** with unthrottled sensor polling and **no internet dependency**) alongside a direct download for `OpenMOI.apk` (~54 MB).
+3. **Online Version Page**: Highlights universal cross-platform access while detailing web limitations (**internet dependency** and **slower hardware utilization** especially on Apple iOS Safari due to throttled sensor rates), with a direct launcher button to the live online tool at [https://jat08.github.io/open_moi_pwa/](https://jat08.github.io/open_moi_pwa/).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Development & Build
+
+```bash
+# Get dependencies
+flutter pub get
+
+# Build PWA release
+flutter build web --release
+```

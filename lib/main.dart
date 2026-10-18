@@ -8,6 +8,9 @@ void main() {
 class OpenMOIHomeApp extends StatelessWidget {
   const OpenMOIHomeApp({super.key});
 
+  static const Color accentBlue = Color.fromRGBO(52, 165, 235, 1.0); // #34A5EB
+  static const Color accentLightBg = Color(0xFFE8F5FD);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,8 +20,8 @@ class OpenMOIHomeApp extends StatelessWidget {
         useMaterial3: true,
         scaffoldBackgroundColor: const Color(0xFFF4F6F8),
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF0381FE),
-          primary: const Color(0xFF0381FE),
+          seedColor: accentBlue,
+          primary: accentBlue,
           surface: const Color(0xFFFFFFFF),
           surfaceContainerLowest: const Color(0xFFFFFFFF),
           surfaceContainerLow: const Color(0xFFF8FAFC),
@@ -110,7 +113,7 @@ class _OneUIHomeScreenState extends State<OneUIHomeScreen> {
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFE0EDFF),
+                      color: OpenMOIHomeApp.accentLightBg,
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Row(
@@ -120,7 +123,7 @@ class _OneUIHomeScreenState extends State<OneUIHomeScreen> {
                           width: 8,
                           height: 8,
                           decoration: const BoxDecoration(
-                            color: Color(0xFF0381FE),
+                            color: OpenMOIHomeApp.accentBlue,
                             shape: BoxShape.circle,
                           ),
                         ),
@@ -128,7 +131,7 @@ class _OneUIHomeScreenState extends State<OneUIHomeScreen> {
                         const Text(
                           'OpenMOI Portal',
                           style: TextStyle(
-                            color: Color(0xFF0381FE),
+                            color: OpenMOIHomeApp.accentBlue,
                             fontWeight: FontWeight.bold,
                             fontSize: 12,
                           ),
@@ -175,11 +178,11 @@ class _OneUIHomeScreenState extends State<OneUIHomeScreen> {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(32),
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                 color: Color.fromRGBO(0, 0, 0, 0.06),
                 blurRadius: 20,
-                offset: const Offset(0, 4),
+                offset: Offset(0, 4),
               ),
             ],
             border: Border.all(color: const Color(0xFFE5E8EB), width: 1),
@@ -210,7 +213,7 @@ class _OneUIHomeScreenState extends State<OneUIHomeScreen> {
         child: Container(
           margin: const EdgeInsets.symmetric(vertical: 6, horizontal: 4),
           decoration: BoxDecoration(
-            color: isSelected ? const Color(0xFF0381FE) : Colors.transparent,
+            color: isSelected ? OpenMOIHomeApp.accentBlue : Colors.transparent,
             borderRadius: BorderRadius.circular(24),
           ),
           child: Row(
@@ -269,7 +272,7 @@ class OverviewPage extends StatelessWidget {
             children: [
               const Row(
                 children: [
-                  Icon(Icons.sports_tennis_rounded, color: Color(0xFF0381FE), size: 28),
+                  Icon(Icons.sports_tennis_rounded, color: OpenMOIHomeApp.accentBlue, size: 28),
                   SizedBox(width: 12),
                   Expanded(
                     child: Text(
@@ -321,8 +324,8 @@ class OverviewPage extends StatelessWidget {
                   'Handle Axis',
                   'Higher Inertia',
                   Icons.scale_rounded,
-                  const Color(0xFFE0EDFF),
-                  const Color(0xFF0381FE),
+                  OpenMOIHomeApp.accentLightBg,
+                  OpenMOIHomeApp.accentBlue,
                 ),
                 _buildMetricCard(
                   'Twist Weight',
@@ -501,10 +504,10 @@ class OverviewPage extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: const Color(0xFFEFF5FE),
+            color: OpenMOIHomeApp.accentLightBg,
             borderRadius: BorderRadius.circular(16),
           ),
-          child: Icon(icon, color: const Color(0xFF0381FE), size: 22),
+          child: Icon(icon, color: OpenMOIHomeApp.accentBlue, size: 22),
         ),
         const SizedBox(width: 14),
         Expanded(
@@ -535,7 +538,7 @@ class OverviewPage extends StatelessWidget {
           width: 32,
           height: 32,
           decoration: BoxDecoration(
-            color: const Color(0xFF0381FE),
+            color: OpenMOIHomeApp.accentBlue,
             borderRadius: BorderRadius.circular(16),
           ),
           child: Center(
@@ -587,8 +590,8 @@ class AndroidPage extends StatelessWidget {
       children: [
         // Primary Highlights Hero Banner
         _OneUICard(
-          bgColor: const Color(0xFFEBF3FE),
-          borderColor: const Color(0xFFC7DCFC),
+          bgColor: OpenMOIHomeApp.accentLightBg,
+          borderColor: const Color(0xFFBCE3FB),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -597,7 +600,7 @@ class AndroidPage extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF0381FE),
+                      color: OpenMOIHomeApp.accentBlue,
                       borderRadius: BorderRadius.circular(18),
                     ),
                     child: const Icon(Icons.android_rounded, color: Colors.white, size: 28),
@@ -612,7 +615,7 @@ class AndroidPage extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            color: Color(0xFF0381FE),
+                            color: OpenMOIHomeApp.accentBlue,
                           ),
                         ),
                         SizedBox(height: 2),
@@ -643,8 +646,8 @@ class AndroidPage extends StatelessWidget {
                 icon: Icons.memory_rounded,
                 title: 'Better Hardware Utilization',
                 description: 'Direct low-level Android SensorManager access enables unthrottled 100Hz–200Hz sensor polling, minimal latency, and zero browser frame jitter for higher fit scores.',
-                badgeColor: const Color(0xFFE0EDFF),
-                iconColor: const Color(0xFF0381FE),
+                badgeColor: OpenMOIHomeApp.accentLightBg,
+                iconColor: OpenMOIHomeApp.accentBlue,
               ),
             ),
           ],
@@ -693,7 +696,7 @@ class AndroidPage extends StatelessWidget {
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF0381FE),
+                    backgroundColor: OpenMOIHomeApp.accentBlue,
                     foregroundColor: Colors.white,
                     elevation: 0,
                     shape: RoundedRectangleBorder(
@@ -836,10 +839,10 @@ class OnlineVersionPage extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFE0EDFF),
+                      color: OpenMOIHomeApp.accentLightBg,
                       borderRadius: BorderRadius.circular(18),
                     ),
-                    child: const Icon(Icons.language_rounded, color: Color(0xFF0381FE), size: 28),
+                    child: const Icon(Icons.language_rounded, color: OpenMOIHomeApp.accentBlue, size: 28),
                   ),
                   const SizedBox(width: 14),
                   const Expanded(
@@ -980,7 +983,7 @@ class OnlineVersionPage extends StatelessWidget {
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF0381FE),
+                    backgroundColor: OpenMOIHomeApp.accentBlue,
                     foregroundColor: Colors.white,
                     elevation: 0,
                     shape: RoundedRectangleBorder(
@@ -1024,11 +1027,11 @@ class _OneUICard extends StatelessWidget {
           color: borderColor ?? const Color(0xFFE5E8EB),
           width: 1,
         ),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Color.fromRGBO(0, 0, 0, 0.02),
             blurRadius: 10,
-            offset: const Offset(0, 2),
+            offset: Offset(0, 2),
           ),
         ],
       ),
@@ -1050,7 +1053,7 @@ class _OneUISectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(icon, size: 20, color: const Color(0xFF0381FE)),
+        Icon(icon, size: 20, color: OpenMOIHomeApp.accentBlue),
         const SizedBox(width: 8),
         Text(
           title,

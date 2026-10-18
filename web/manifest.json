@@ -4,7 +4,7 @@
     "start_url": ".",
     "display": "standalone",
     "background_color": "#F4F6F8",
-    "theme_color": "#0381FE",
+    "theme_color": "#34A5EB",
     "description": "OpenMOI - Moment of Inertia, Swing Weight & Twist Weight measurement application and PWA portal.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,

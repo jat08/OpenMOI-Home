@@ -68358,7 +68358,7 @@ if(a){s=this.c
 s.toString
 s=A.bP(s,m,t.w).w.a.a*0.1}else s=20
 r=a?80:50
-q=A.ep(m,B.OS,B.w,m,m,new A.cs(B.kA,m,m,A.dL(20),m,m,B.ae),m,m,m,B.Az,m,m,m)
+q=A.ep(m,B.OZ,B.w,m,m,new A.cs(B.kA,m,m,A.dL(20),m,m,B.ae),m,m,m,B.Az,m,m,m)
 p=A.fC("Measure Paddle & Racquet Physics with the OpenMOI Oscillator",m,m,A.fD(m,m,B.cb,m,m,m,m,m,m,m,m,a?48:32,m,m,B.i0,m,1.1,!0,m,-1,m,m,m,m,m,m),B.cy)
 o=t.E
 p=A.c([q,B.fo,p,B.JR,A.fC("OpenMOI is the official companion app for the physical paddle/racquet oscillator device. It uses smartphone motion sensors mounted on the device to calculate Moment of Inertia (MOI), Swing Weight (SW), and Twist Weight (TW).",m,m,A.fD(m,m,B.bI,m,m,m,m,m,m,m,m,a?18:16,m,m,m,m,1.6,!0,m,m,m,m,m,m,m,m),B.cy),B.fp],o)
@@ -68429,7 +68429,7 @@ A.abr.prototype={
 $0(){return this.a.jF(0)},
 $S:0}
 A.KO.prototype={
-O(a){return A.fP(A.c([B.OY,B.fo,A.as7(new A.a98())],t.E),B.aa,B.V)}}
+O(a){return A.fP(A.c([B.OX,B.fo,A.as7(new A.a98())],t.E),B.aa,B.V)}}
 A.a98.prototype={
 $2(a,b){var s,r,q=null,p=b.b,o=p>800
 if(o)s=3
@@ -68449,7 +68449,7 @@ return A.S(A.acT(q,B.lC),$async$qY)
 case 2:if(!b)A.amA().$1("Could not launch "+q.k(0))
 return A.O(null,r)}})
 return A.P($async$qY,r)},
-O(a){var s,r,q,p=null,o=t.E,n=A.hY(A.c([A.UE(p,B.lt,p,p,this.d,p,p,"Back to Overview"),B.jc,A.ep(p,B.OX,B.w,p,p,new A.cs(B.kA,p,p,A.dL(8),p,p,B.ae),p,p,p,B.lc,p,p,p)],o),B.ab,B.ap,B.V,0),m=this.c,l=A.fC("Native Android Application",p,p,A.fD(p,p,B.cb,p,p,p,p,p,p,p,p,m?40:28,p,p,B.a4,p,1.1,!0,p,p,p,p,p,p,p,p),p),k=m?B.aF:B.aP,j=m?1:0
+O(a){var s,r,q,p=null,o=t.E,n=A.hY(A.c([A.UE(p,B.lt,p,p,this.d,p,p,"Back to Overview"),B.jc,A.ep(p,B.OW,B.w,p,p,new A.cs(B.kA,p,p,A.dL(8),p,p,B.ae),p,p,p,B.lc,p,p,p)],o),B.ab,B.ap,B.V,0),m=this.c,l=A.fC("Native Android Application",p,p,A.fD(p,p,B.cb,p,p,p,p,p,p,p,p,m?40:28,p,p,B.a4,p,1.1,!0,p,p,p,p,p,p,p,p),p),k=m?B.aF:B.aP,j=m?1:0
 j=A.c([A.D3(A.fP(A.c([new A.Ab(B.B7,"Better Hardware Utilization","Direct low-level Android API access enables unthrottled 100Hz\u2013200Hz sensor polling, minimal latency, and zero browser frame jitter for higher sine-wave fit scores.",p),B.fp,new A.Ab(B.Be,"100% Offline Functionality","Measure equipment on the court, in the workshop, or in the lab without needing Wi-Fi or cellular connections to load web scripts.",p)],o),B.ab,B.V),j)],o)
 if(m)j.push(B.JP)
 if(!m)j.push(B.fq)
@@ -68457,7 +68457,7 @@ m=m?1:0
 s=A.dL(16)
 r=A.adA(B.hj,1)
 q=A.c([new A.d5(0,B.cK,A.C7(0,0,0,0.03),B.r_,10)],t.sq)
-j.push(A.D3(A.ep(p,A.fP(A.c([B.P2,B.jd,B.OZ,B.fo,A.a2z(A.ae3(B.Bj,B.OT,this.gWH(),A.Su(p,p,B.av,p,p,p,0,p,p,B.i,p,p,B.Av,p,new A.cf(A.dL(8),B.q),p,p,p,B.fv,p)),p,1/0),B.fo,B.l3,B.dQ,B.P3,B.wo,new A.dE(B.hp,A.fC("1. Tap download to save the APK to your device.",p,p,B.jl,p),p),new A.dE(B.hp,A.fC("2. Open the downloaded file from notifications.",p,p,B.jl,p),p),new A.dE(B.hp,A.fC('3. Allow "Install from Unknown Sources" if prompted.',p,p,B.jl,p),p)],o),B.aa,B.V),B.w,p,p,new A.cs(B.i,p,r,s,q,p,B.ae),p,p,p,B.AC,p,p,p),m))
+j.push(A.D3(A.ep(p,A.fP(A.c([B.P2,B.jd,B.OY,B.fo,A.a2z(A.ae3(B.Bj,B.OS,this.gWH(),A.Su(p,p,B.av,p,p,p,0,p,p,B.i,p,p,B.Av,p,new A.cf(A.dL(8),B.q),p,p,p,B.fv,p)),p,1/0),B.fo,B.l3,B.dQ,B.P3,B.wo,new A.dE(B.hp,A.fC("1. Tap download to save the APK to your device.",p,p,B.jl,p),p),new A.dE(B.hp,A.fC("2. Open the downloaded file from notifications.",p,p,B.jl,p),p),new A.dE(B.hp,A.fC('3. Allow "Install from Unknown Sources" if prompted.',p,p,B.jl,p),p)],o),B.aa,B.V),B.w,p,p,new A.cs(B.i,p,r,s,q,p,B.ae),p,p,p,B.AC,p,p,p),m))
 return A.fP(A.c([n,B.dQ,l,B.dQ,B.P4,B.fq,A.art(j,B.aa,k,p,B.ap,B.V,0,p,p,B.c_)],o),B.aa,B.V)}}
 A.yJ.prototype={
 rg(){var s=0,r=A.Q(t.H),q
@@ -68468,8 +68468,8 @@ return A.S(A.acT(q,B.lC),$async$rg)
 case 2:if(!b)A.amA().$1("Could not launch "+q.k(0))
 return A.O(null,r)}})
 return A.P($async$rg,r)},
-O(a){var s=this,r=null,q=t.E,p=A.hY(A.c([A.UE(r,B.lt,r,r,s.d,r,r,"Back to Overview"),B.jc,A.ep(r,B.OW,B.w,r,r,new A.cs(B.kU,r,r,A.dL(8),r,r,B.ae),r,r,r,B.lc,r,r,r)],q),B.ab,B.ap,B.V,0),o=A.fC("Online Web Version",r,r,A.fD(r,r,B.cb,r,r,r,r,r,r,r,r,s.c?40:28,r,r,B.a4,r,1.1,!0,r,r,r,r,r,r,r,r),r),n=A.adA(B.zg,1),m=A.dL(12)
-return A.fP(A.c([p,B.dQ,o,B.dQ,B.P_,B.fq,A.ep(r,A.hY(A.c([B.Bk,B.JM,A.D3(A.fP(A.c([B.OV,B.jd,s.F9("Internet Dependency:","Requires an active web connection to load application files, unlike the offline Android app."),B.jd,s.F9("Apple iOS Hardware Limits:","Web APIs introduce polling overhead. On Safari (iOS), strict sensor permission policies and throttled sample rates (30Hz\u201360Hz) can cause sampling jitter during high-frequency physical oscillations.")],q),B.aa,B.V),1)],q),B.aa,B.ap,B.V,0),B.w,r,r,new A.cs(B.zW,r,n,m,r,r,B.ae),r,r,r,B.hq,r,r,r),B.fq,A.lt(A.ae3(B.Bl,B.OU,s.ga_m(),A.Su(r,r,B.kT,r,r,r,0,r,r,B.i,r,r,B.AB,r,new A.cf(A.dL(8),B.q),r,r,r,B.fv,r)),r,r)],q),B.aa,B.V)},
+O(a){var s=this,r=null,q=t.E,p=A.hY(A.c([A.UE(r,B.lt,r,r,s.d,r,r,"Back to Overview"),B.jc,A.ep(r,B.OV,B.w,r,r,new A.cs(B.kU,r,r,A.dL(8),r,r,B.ae),r,r,r,B.lc,r,r,r)],q),B.ab,B.ap,B.V,0),o=A.fC("Online Web Version",r,r,A.fD(r,r,B.cb,r,r,r,r,r,r,r,r,s.c?40:28,r,r,B.a4,r,1.1,!0,r,r,r,r,r,r,r,r),r),n=A.adA(B.zg,1),m=A.dL(12)
+return A.fP(A.c([p,B.dQ,o,B.dQ,B.P_,B.fq,A.ep(r,A.hY(A.c([B.Bk,B.JM,A.D3(A.fP(A.c([B.OU,B.jd,s.F9("Internet Dependency:","Requires an active web connection to load application files, unlike the offline Android app."),B.jd,s.F9("Apple iOS Hardware Limits:","Web APIs introduce polling overhead. On Safari (iOS), strict sensor permission policies and throttled sample rates (30Hz\u201360Hz) can cause sampling jitter during high-frequency physical oscillations.")],q),B.aa,B.V),1)],q),B.aa,B.ap,B.V,0),B.w,r,r,new A.cs(B.zW,r,n,m,r,r,B.ae),r,r,r,B.hq,r,r,r),B.fq,A.lt(A.ae3(B.Bl,B.OT,s.ga_m(),A.Su(r,r,B.kT,r,r,r,0,r,r,B.i,r,r,B.AB,r,new A.cf(A.dL(8),B.q),r,r,r,B.fv,r)),r,r)],q),B.aa,B.V)},
 F9(a,b){var s=null
 return A.a0b(s,s,s,B.dS,s,s,!0,s,A.n5(A.c([A.n5(s,s,s,s,s,s,s,s,s,B.wE,a+" "),A.n5(s,s,s,s,s,s,s,s,s,s,b)],t.VO),s,s,s,s,s,s,s,s,B.Of,s),B.aO,s,s,B.az,B.bh)}}
 A.ia.prototype={
@@ -73424,20 +73424,20 @@ B.OO=new A.cR(B.Mw,B.Lu,B.Mx,B.N_,B.Lb,B.Lj,B.LM,B.MV,B.LZ,B.No,B.KH,B.KZ,B.Nk,B
 B.wI=new A.j(!0,null,null,null,null,null,14,B.a4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.OQ=new A.cI("Download APK",null,B.wI,null,null,null,null)
 B.OR=new A.cI("Download Android App",null,null,null,null,null,null)
-B.Nf=new A.j(!0,B.av,null,null,null,null,13,B.a4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.OS=new A.cI("Open-Source Physics Companion App",null,B.Nf,null,null,null,null)
-B.OT=new A.cI("Download OpenMOI.apk (~54 MB)",null,null,null,null,null,null)
-B.OU=new A.cI("Launch Online Web App (GitHub Pages)",null,null,null,null,null,null)
+B.OS=new A.cI("Download OpenMOI.apk (~54 MB)",null,null,null,null,null,null)
+B.OT=new A.cI("Launch Online Web App (GitHub Pages)",null,null,null,null,null,null)
 B.Og=new A.j(!0,B.kN,null,null,null,null,18,B.a4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.OV=new A.cI("Browser Limitations to Consider",null,B.Og,null,null,null,null)
+B.OU=new A.cI("Browser Limitations to Consider",null,B.Og,null,null,null,null)
 B.LQ=new A.j(!0,B.bI,null,null,null,null,12,B.a4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.OW=new A.cI("UNIVERSAL ACCESS",null,B.LQ,null,null,null,null)
+B.OV=new A.cI("UNIVERSAL ACCESS",null,B.LQ,null,null,null,null)
 B.KA=new A.j(!0,B.av,null,null,null,null,12,B.a4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.OX=new A.cI("RECOMMENDED PLATFORM",null,B.KA,null,null,null,null)
+B.OW=new A.cI("RECOMMENDED PLATFORM",null,B.KA,null,null,null,null)
 B.Nh=new A.j(!0,B.cb,null,null,null,null,24,B.a4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.OY=new A.cI("Core Capabilities",null,B.Nh,null,null,null,null)
+B.OX=new A.cI("Core Capabilities",null,B.Nh,null,null,null,null)
 B.Oo=new A.j(!0,B.bI,null,null,null,null,null,null,null,null,null,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.OZ=new A.cI("Install the standalone APK directly onto your Android phone or tablet device.",null,B.Oo,null,null,null,null)
+B.OY=new A.cI("Install the standalone APK directly onto your Android phone or tablet device.",null,B.Oo,null,null,null,null)
+B.Nf=new A.j(!0,B.av,null,null,null,null,13,B.a4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.OZ=new A.cI("Physics Companion App",null,B.Nf,null,null,null,null)
 B.wH=new A.j(!0,B.bI,null,null,null,null,18,null,null,null,null,null,1.6,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.P_=new A.cI("The PWA version allows users on any device\u2014including iOS (iPhones & iPads) and desktops\u2014to quickly run measurements directly inside a web browser without installing native packages.",null,B.wH,null,null,null,null)
 B.P0=new A.cI("Launch Web App",null,null,null,null,null,null)

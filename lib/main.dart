@@ -87,10 +87,7 @@ class _WebMainScreenState extends State<WebMainScreen> {
                       onTap: () => _navigateTo(0),
                       child: Row(
                         children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: Image.asset('assets/images/logo.png', width: 40, height: 40, errorBuilder: (c, e, s) => const Icon(Icons.sports_tennis_rounded, color: OpenMOIHomeApp.accentBlue, size: 28)),
-                          ),
+                          Image.asset('assets/images/logo.png', width: 44, height: 44, fit: BoxFit.contain, errorBuilder: (c, e, s) => const Icon(Icons.sports_tennis_rounded, color: OpenMOIHomeApp.accentBlue, size: 28)),
                           const SizedBox(width: 10),
                           const Text(
                             'OpenMOI',

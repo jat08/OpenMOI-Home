@@ -254,7 +254,7 @@ class _WebMainScreenState extends State<WebMainScreen> {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: const Text(
-                  'Open-Source Physics Companion App',
+                  'Physics Companion App',
                   style: TextStyle(color: OpenMOIHomeApp.accentBlue, fontWeight: FontWeight.bold, fontSize: 13),
                 ),
               ),

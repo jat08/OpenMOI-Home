@@ -1,6 +1,6 @@
 # OpenMOI-Home PWA
 
-An open-source, Progressive Web App (PWA) portal for **OpenMOI** — designed for measuring Moment of Inertia (MOI), Swing Weight (SW), and Twist Weight (TW) of sports equipment (pickleball paddles, tennis racquets) using smartphone motion sensors.
+A Progressive Web App (PWA) portal for **OpenMOI** — designed for measuring Moment of Inertia (MOI), Swing Weight (SW), and Twist Weight (TW) of sports equipment (pickleball paddles, tennis racquets) using smartphone motion sensors.
 
 Styled with Samsung **One UI 9.0** design principles.
 

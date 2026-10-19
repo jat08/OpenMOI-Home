@@ -68320,7 +68320,7 @@ ak(){return new A.NR(A.a0F())}}
 A.NR.prototype={
 m9(a){this.az(new A.abq(this,a))
 this.e.hT(0,B.kS,B.b7)},
-O(a){var s=this,r=null,q=A.bP(a,r,t.w).w.a.a,p=q>850,o=A.c([new A.d5(0,B.cK,A.C5(0,0,0,0.05),B.Gi,10)],t.sq),n=p?q*0.1:20,m=t.E,l=A.c([A.hY(A.c([A.UF("assets/images/logo.png",new A.abs(),B.xC,44,44),B.JC,B.OS],m),B.ag,B.at,B.X,0)],m)
+O(a){var s=this,r=null,q=A.bP(a,r,t.w).w.a.a,p=q>850,o=A.c([new A.d5(0,B.cK,A.C5(0,0,0,0.05),B.Gi,10)],t.sq),n=p?q*0.1:20,m=t.E,l=A.c([A.hY(A.c([A.UF("assets/images/logo.png",new A.abs(),B.xC,44,44),B.JC,B.OR],m),B.ag,B.at,B.X,0)],m)
 if(p)l.push(A.hY(A.c([s.wu(0,"Overview"),B.wi,s.wu(1,"Android Native"),B.wi,s.wu(2,"Online Web App")],m),B.ag,B.at,B.X,0))
 else l.push(A.aeh(r,B.Bi,r,r,new A.abt(s,a),r,r,r))
 o=A.ep(r,A.ajE(!0,new A.dm(new A.aS(n,0,n,0),A.hY(l,B.ag,B.it,B.X,0),r),B.aY,!0),B.w,r,r,new A.cr(B.i,r,r,r,o,r,B.ae),r,r,r,r,r,r,r)
@@ -68354,16 +68354,16 @@ if(a){s=this.c
 s.toString
 s=A.bP(s,m,t.w).w.a.a*0.1}else s=20
 r=a?80:50
-q=A.ep(m,B.OQ,B.w,m,m,new A.cr(B.hd,m,m,A.e0(20),m,m,B.ae),m,m,m,B.Av,m,m,m)
+q=A.ep(m,B.OP,B.w,m,m,new A.cr(B.hd,m,m,A.e0(20),m,m,B.ae),m,m,m,B.Av,m,m,m)
 p=A.f8("Measure Paddle & Racquet Physics with the OpenMOI Oscillator",m,m,A.fD(m,m,B.ca,m,m,m,m,m,m,m,m,a?48:32,m,m,B.i2,m,1.1,!0,m,-1,m,m,m,m,m,m),B.cx)
 o=t.E
-p=A.c([q,B.fp,p,B.JH,A.f8("OpenMOI is the official companion app for the physical paddle/racquet oscillator device. It uses smartphone motion sensors mounted on the device to calculate Moment of Inertia (MOI), Swing Weight (SW), and Twist Weight (TW).",m,m,A.fD(m,m,B.bI,m,m,m,m,m,m,m,m,a?18:16,m,m,m,m,1.6,!0,m,m,m,m,m,m,m,m),B.cx),B.fq],o)
+p=A.c([q,B.fp,p,B.JH,A.f8("OpenMOI is the official companion app for the physical paddle/racquet oscillator device. It uses smartphone motion sensors mounted on the device to calculate and estimate Moment of Inertia (MOI), Swing Weight (SW), and Twist Weight (TW).",m,m,A.fD(m,m,B.bI,m,m,m,m,m,m,m,m,a?18:16,m,m,m,m,1.6,!0,m,m,m,m,m,m,m,m),B.cx),B.fq],o)
 if(a)p.push(A.UF(l,new A.abi(),m,300,m))
 else p.push(A.UF(l,new A.abj(),m,200,m))
 p.push(B.fq)
 q=A.ae0(B.Be,B.OH,new A.abk(this),A.ae1(m,m,B.a2,m,m,m,0,m,m,B.i,m,m,B.l9,m,new A.ci(A.e0(12),B.q),m,m,m,B.fw,m))
 n=A.asU(m,m,m,m,m,m,m,m,m,B.hb,m,m,B.l9,m,new A.ci(A.e0(12),B.q),B.xv,m,m,B.fw,m)
-p.push(new A.HD(B.wQ,16,16,A.c([q,new A.EH(!0,new A.abl(this),m,m,m,n,m,m,!1,m,!0,m,new A.KI(B.OR,B.Bj,n,m,m),m)],o),m))
+p.push(new A.HD(B.wQ,16,16,A.c([q,new A.EH(!0,new A.abl(this),m,m,m,n,m,m,!1,m,!0,m,new A.KI(B.OQ,B.Bj,n,m,m),m)],o),m))
 return A.ep(m,A.lt(new A.eQ(B.xB,A.fP(p,B.ag,B.X),m),m,m),B.w,B.i,m,m,m,m,m,new A.aS(s,r,s,r),m,m,1/0)},
 V7(a){var s,r,q=null
 if(a){s=this.c
@@ -68447,7 +68447,7 @@ m=m?1:0
 s=A.e0(16)
 r=A.adx(B.hm,1)
 q=A.c([new A.d5(0,B.cK,A.C5(0,0,0,0.03),B.qV,10)],t.sq)
-j.push(A.D2(A.ep(p,A.fP(A.c([B.OT,B.jf,B.OP,B.fp,A.a2y(A.ae0(B.Bc,B.OJ,this.gWG(),A.ae1(p,p,B.a2,p,p,p,0,p,p,B.i,p,p,B.Ar,p,new A.ci(A.e0(8),B.q),p,p,p,B.fw,p)),p,1/0),B.fp,B.kZ,B.dQ,B.OU,B.wj,new A.dm(B.ez,A.f8("1. Tap download to save the APK to your device.",p,p,B.fx,p),p),new A.dm(B.ez,A.f8("2. Open the downloaded file from notifications.",p,p,B.fx,p),p),new A.dm(B.ez,A.f8('3. Navigate to Settings > Security and Privacy and disable "Auto Blocker" (Samsung devices).',p,p,B.fx,p),p),new A.dm(B.ez,A.f8('4. Allow "Install from Unknown Sources" if prompted.',p,p,B.fx,p),p)],o),B.ab,B.X),B.w,p,p,new A.cr(B.i,p,r,s,q,p,B.ae),p,p,p,B.Ax,p,p,p),m))
+j.push(A.D2(A.ep(p,A.fP(A.c([B.OS,B.jf,B.OU,B.fp,A.a2y(A.ae0(B.Bc,B.OJ,this.gWG(),A.ae1(p,p,B.a2,p,p,p,0,p,p,B.i,p,p,B.Ar,p,new A.ci(A.e0(8),B.q),p,p,p,B.fw,p)),p,1/0),B.fp,B.kZ,B.dQ,B.OT,B.wj,new A.dm(B.ez,A.f8("1. Tap download to save the APK to your device.",p,p,B.fx,p),p),new A.dm(B.ez,A.f8("2. Open the downloaded file from notifications.",p,p,B.fx,p),p),new A.dm(B.ez,A.f8('3. Navigate to Settings > Security and Privacy and disable "Auto Blocker" (Samsung devices).',p,p,B.fx,p),p),new A.dm(B.ez,A.f8('4. Allow "Install from Unknown Sources" if prompted.',p,p,B.fx,p),p)],o),B.ab,B.X),B.w,p,p,new A.cr(B.i,p,r,s,q,p,B.ae),p,p,p,B.Ax,p,p,p),m))
 return A.fP(A.c([n,B.dQ,l,B.dQ,B.OV,B.fr,A.arq(j,B.ab,k,p,B.at,B.X,0,p,p,B.cA)],o),B.ab,B.X)}}
 A.yH.prototype={
 rg(){var s=0,r=A.Q(t.H),q
@@ -73413,18 +73413,18 @@ B.LG=new A.j(!0,B.bI,null,null,null,null,12,B.a5,null,null,null,null,null,null,n
 B.ON=new A.cQ("UNIVERSAL ACCESS",null,B.LG,null,null,null,null)
 B.N9=new A.j(!0,B.ca,null,null,null,null,24,B.a5,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.OO=new A.cQ("Core Capabilities",null,B.N9,null,null,null,null)
-B.Oe=new A.j(!0,B.bI,null,null,null,null,null,null,null,null,null,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.OP=new A.cQ("Install the standalone APK directly onto your Android phone or tablet device.",null,B.Oe,null,null,null,null)
 B.N7=new A.j(!0,B.a2,null,null,null,null,13,B.a5,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.OQ=new A.cQ("Physics Companion App",null,B.N7,null,null,null,null)
-B.OR=new A.cQ("Launch Web App",null,null,null,null,null,null)
+B.OP=new A.cQ("Physics Companion App",null,B.N7,null,null,null,null)
+B.OQ=new A.cQ("Launch Web App",null,null,null,null,null,null)
 B.zL=new A.z(1,0.11764705882352941,0.1607843137254902,0.23137254901960785,B.f)
 B.Mx=new A.j(!0,B.zL,null,null,null,null,22,B.a5,null,-0.5,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.OS=new A.cQ("OpenMOI",null,B.Mx,null,null,null,null)
+B.OR=new A.cQ("OpenMOI",null,B.Mx,null,null,null,null)
 B.NA=new A.j(!0,B.ca,null,null,null,null,20,B.a5,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.OT=new A.cQ("Download Package",null,B.NA,null,null,null,null)
+B.OS=new A.cQ("Download Package",null,B.NA,null,null,null,null)
 B.Ok=new A.j(!0,null,null,null,null,null,14,B.a5,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.OU=new A.cQ("Installation Instructions:",null,B.Ok,null,null,null,null)
+B.OT=new A.cQ("Installation Instructions:",null,B.Ok,null,null,null,null)
+B.Oe=new A.j(!0,B.bI,null,null,null,null,null,null,null,null,null,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.OU=new A.cQ("Install the standalone APK directly onto your Android phone.",null,B.Oe,null,null,null,null)
 B.OV=new A.cQ("The Android native build is engineered for maximum precision. By bypassing web browser restrictions, it accesses the device's SensorManager directly to deliver uncompromised measurement stability.",null,B.wD,null,null,null,null)
 B.Rx=new A.a44(0,"system")
 B.Gn=new A.m(0.056,0.024)

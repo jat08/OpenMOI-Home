@@ -68357,7 +68357,7 @@ r=a?80:50
 q=A.ep(m,B.OP,B.w,m,m,new A.cr(B.hd,m,m,A.e0(20),m,m,B.ae),m,m,m,B.Av,m,m,m)
 p=A.f8("Measure Paddle & Racquet Physics with the OpenMOI Oscillator",m,m,A.fD(m,m,B.ca,m,m,m,m,m,m,m,m,a?48:32,m,m,B.i2,m,1.1,!0,m,-1,m,m,m,m,m,m),B.cx)
 o=t.E
-p=A.c([q,B.fp,p,B.JH,A.f8("OpenMOI is the official companion app for the physical paddle/racquet oscillator device. It uses smartphone motion sensors mounted on the device to calculate and estimate Moment of Inertia (MOI), Swing Weight (SW), and Twist Weight (TW).",m,m,A.fD(m,m,B.bI,m,m,m,m,m,m,m,m,a?18:16,m,m,m,m,1.6,!0,m,m,m,m,m,m,m,m),B.cx),B.fq],o)
+p=A.c([q,B.fp,p,B.JH,A.f8("OpenMOI is the official companion app for the physical paddle/racquet oscillator device. It uses smartphone motion sensors mounted on the device to calculate Moment of Inertia (MOI), Swing Weight (SW), and Twist Weight (TW). It can also be used as a standalone app to estimate these values.",m,m,A.fD(m,m,B.bI,m,m,m,m,m,m,m,m,a?18:16,m,m,m,m,1.6,!0,m,m,m,m,m,m,m,m),B.cx),B.fq],o)
 if(a)p.push(A.UF(l,new A.abi(),m,300,m))
 else p.push(A.UF(l,new A.abj(),m,200,m))
 p.push(B.fq)

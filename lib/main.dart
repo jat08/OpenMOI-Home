@@ -106,8 +106,6 @@ class _WebMainScreenState extends State<WebMainScreen> {
                         _buildNavTextBtn(1, 'Android Native'),
                         const SizedBox(width: 24),
                         _buildNavTextBtn(2, 'Online Web App'),
-                        const SizedBox(width: 32),
-                        _buildHeaderCTA(),
                       ],
                     )
                   else
@@ -173,19 +171,6 @@ class _WebMainScreenState extends State<WebMainScreen> {
     );
   }
 
-  Widget _buildHeaderCTA() {
-    return ElevatedButton(
-      onPressed: () => _navigateTo(1), // Go to Android page
-      style: ElevatedButton.styleFrom(
-        backgroundColor: OpenMOIHomeApp.accentBlue,
-        foregroundColor: Colors.white,
-        elevation: 0,
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-      ),
-      child: const Text('Download APK', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-    );
-  }
 
   void _showMobileMenu(BuildContext context) {
     showModalBottomSheet(

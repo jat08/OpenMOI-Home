@@ -283,13 +283,13 @@ class _WebMainScreenState extends State<WebMainScreen> {
               const SizedBox(height: 30),
               if (isDesktop)
                 Image.asset(
-                  'assets/images/device.png',
+                  'assets/images/device.jpg',
                   height: 300,
                   errorBuilder: (c, e, s) => const SizedBox(),
                 )
               else
                 Image.asset(
-                  'assets/images/device.png',
+                  'assets/images/device.jpg',
                   height: 200,
                   errorBuilder: (c, e, s) => const SizedBox(),
                 ),
@@ -408,13 +408,14 @@ class _OverviewContent extends StatelessWidget {
         LayoutBuilder(
           builder: (context, constraints) {
             int columns = constraints.maxWidth > 800 ? 3 : (constraints.maxWidth > 500 ? 2 : 1);
+            double aspectRatio = constraints.maxWidth > 800 ? 1.4 : (constraints.maxWidth > 500 ? 1.3 : 1.8);
             return GridView.count(
               crossAxisCount: columns,
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               mainAxisSpacing: 20,
               crossAxisSpacing: 20,
-              childAspectRatio: 1.1,
+              childAspectRatio: aspectRatio,
               children: [
                 _WebFeatureCard(
                   icon: Icons.scale_rounded,

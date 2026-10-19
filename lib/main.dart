@@ -451,6 +451,13 @@ class _OverviewContent extends StatelessWidget {
                   iconBg: const Color(0xFFECFEFF),
                   iconColor: const Color(0xFF0891B2),
                 ),
+                _WebFeatureCard(
+                  icon: Icons.lightbulb_outline_rounded,
+                  title: 'Intuitive & User-Friendly',
+                  description: 'Designed with a clean, accessible interface that makes capturing complex physics measurements simple and straightforward.',
+                  iconBg: const Color(0xFFFFFBEB),
+                  iconColor: const Color(0xFFD97706),
+                ),
               ],
             );
           },

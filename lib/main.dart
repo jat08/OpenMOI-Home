@@ -85,11 +85,14 @@ class _WebMainScreenState extends State<WebMainScreen> {
                     cursor: SystemMouseCursors.click,
                     child: GestureDetector(
                       onTap: () => _navigateTo(0),
-                      child: const Row(
+                      child: Row(
                         children: [
-                          Icon(Icons.sports_tennis_rounded, color: OpenMOIHomeApp.accentBlue, size: 28),
-                          SizedBox(width: 10),
-                          Text(
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Image.asset('assets/images/logo.png', width: 40, height: 40, errorBuilder: (c, e, s) => const Icon(Icons.sports_tennis_rounded, color: OpenMOIHomeApp.accentBlue, size: 28)),
+                          ),
+                          const SizedBox(width: 10),
+                          const Text(
                             'OpenMOI',
                             style: TextStyle(
                               fontSize: 22,
@@ -254,13 +257,13 @@ class _WebMainScreenState extends State<WebMainScreen> {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: const Text(
-                  'Open-Source Physics Engine',
+                  'Open-Source Physics Companion App',
                   style: TextStyle(color: OpenMOIHomeApp.accentBlue, fontWeight: FontWeight.bold, fontSize: 13),
                 ),
               ),
               const SizedBox(height: 24),
               Text(
-                'Measure Paddle & Racquet Physics with Your Smartphone',
+                'Measure Paddle & Racquet Physics with the OpenMOI Oscillator',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: isDesktop ? 48 : 32,
@@ -272,7 +275,7 @@ class _WebMainScreenState extends State<WebMainScreen> {
               ),
               const SizedBox(height: 20),
               Text(
-                'OpenMOI uses smartphone motion sensors to calculate the Moment of Inertia (MOI), Swing Weight (SW), and Twist Weight (TW) of sports equipment with zero specialized hardware.',
+                'OpenMOI is the official companion app for the physical paddle/racquet oscillator device. It uses smartphone motion sensors mounted on the device to calculate Moment of Inertia (MOI), Swing Weight (SW), and Twist Weight (TW).',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: isDesktop ? 18 : 16,
@@ -280,7 +283,20 @@ class _WebMainScreenState extends State<WebMainScreen> {
                   height: 1.6,
                 ),
               ),
-              const SizedBox(height: 40),
+              const SizedBox(height: 30),
+              if (isDesktop)
+                Image.asset(
+                  'assets/images/device.png',
+                  height: 300,
+                  errorBuilder: (c, e, s) => const SizedBox(),
+                )
+              else
+                Image.asset(
+                  'assets/images/device.png',
+                  height: 200,
+                  errorBuilder: (c, e, s) => const SizedBox(),
+                ),
+              const SizedBox(height: 30),
               Wrap(
                 alignment: WrapAlignment.center,
                 spacing: 16,
@@ -368,8 +384,8 @@ class _WebMainScreenState extends State<WebMainScreen> {
 
   Widget _buildPageContent(int index, bool isDesktop) {
     if (index == 0) return _OverviewContent(isDesktop: isDesktop);
-    if (index == 1) return _AndroidContent(isDesktop: isDesktop);
-    if (index == 2) return _OnlineContent(isDesktop: isDesktop);
+    if (index == 1) return _AndroidContent(isDesktop: isDesktop, onBack: () => _navigateTo(0));
+    if (index == 2) return _OnlineContent(isDesktop: isDesktop, onBack: () => _navigateTo(0));
     return const SizedBox();
   }
 }
@@ -426,8 +442,8 @@ class _OverviewContent extends StatelessWidget {
                 ),
                 _WebFeatureCard(
                   icon: Icons.sensors_rounded,
-                  title: 'Zero-Hardware Timer',
-                  description: 'Turn your smartphone into a high-precision oscillation timer utilizing high-frequency Gyro & Accelerometer APIs.',
+                  title: 'Oscillator Timer',
+                  description: 'Turn your smartphone into a high-precision oscillator timer utilizing high-frequency Gyro & Accelerometer APIs when mounted on the hardware device.',
                   iconBg: const Color(0xFFFAF5FF),
                   iconColor: const Color(0xFF9333EA),
                 ),
@@ -459,7 +475,8 @@ class _OverviewContent extends StatelessWidget {
 // ============================================================================
 class _AndroidContent extends StatelessWidget {
   final bool isDesktop;
-  const _AndroidContent({required this.isDesktop});
+  final VoidCallback onBack;
+  const _AndroidContent({required this.isDesktop, required this.onBack});
 
   Future<void> _downloadApk() async {
     final Uri url = Uri.parse('OpenMOI.apk');
@@ -473,10 +490,21 @@ class _AndroidContent extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-          decoration: BoxDecoration(color: OpenMOIHomeApp.accentLightBg, borderRadius: BorderRadius.circular(8)),
-          child: const Text('RECOMMENDED PLATFORM', style: TextStyle(color: OpenMOIHomeApp.accentBlue, fontSize: 12, fontWeight: FontWeight.bold)),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            IconButton(
+              icon: const Icon(Icons.arrow_back_rounded, color: Color(0xFF64748B)),
+              onPressed: onBack,
+              tooltip: 'Back to Overview',
+            ),
+            const SizedBox(width: 8),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+              decoration: BoxDecoration(color: OpenMOIHomeApp.accentLightBg, borderRadius: BorderRadius.circular(8)),
+              child: const Text('RECOMMENDED PLATFORM', style: TextStyle(color: OpenMOIHomeApp.accentBlue, fontSize: 12, fontWeight: FontWeight.bold)),
+            ),
+          ],
         ),
         const SizedBox(height: 16),
         Text(
@@ -583,7 +611,8 @@ class _AndroidContent extends StatelessWidget {
 // ============================================================================
 class _OnlineContent extends StatelessWidget {
   final bool isDesktop;
-  const _OnlineContent({required this.isDesktop});
+  final VoidCallback onBack;
+  const _OnlineContent({required this.isDesktop, required this.onBack});
 
   Future<void> _launchOnlineTool() async {
     final Uri url = Uri.parse('https://jat08.github.io/open_moi_pwa/');
@@ -597,10 +626,21 @@ class _OnlineContent extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-          decoration: BoxDecoration(color: const Color(0xFFF1F5F9), borderRadius: BorderRadius.circular(8)),
-          child: const Text('UNIVERSAL ACCESS', style: TextStyle(color: Color(0xFF475569), fontSize: 12, fontWeight: FontWeight.bold)),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            IconButton(
+              icon: const Icon(Icons.arrow_back_rounded, color: Color(0xFF64748B)),
+              onPressed: onBack,
+              tooltip: 'Back to Overview',
+            ),
+            const SizedBox(width: 8),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+              decoration: BoxDecoration(color: const Color(0xFFF1F5F9), borderRadius: BorderRadius.circular(8)),
+              child: const Text('UNIVERSAL ACCESS', style: TextStyle(color: Color(0xFF475569), fontSize: 12, fontWeight: FontWeight.bold)),
+            ),
+          ],
         ),
         const SizedBox(height: 16),
         Text(

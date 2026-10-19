@@ -359,7 +359,7 @@ class _WebMainScreenState extends State<WebMainScreen> {
                       Icon(Icons.sports_tennis_rounded, color: Color(0xFF94A3B8), size: 20),
                       SizedBox(width: 8),
                       Text(
-                        '© 2026 OpenMOI Project.',
+                        '2026 OpenMOI Project.',
                         style: TextStyle(color: Color(0xFF64748B), fontSize: 14),
                       ),
                     ],
@@ -425,20 +425,6 @@ class _OverviewContent extends StatelessWidget {
                   description: 'Calculate MOI about the handle axis (SW) and center axis (TW) to assess paddle maneuverability and sweet-spot power.',
                   iconBg: const Color(0xFFEFF6FF),
                   iconColor: OpenMOIHomeApp.accentBlue,
-                ),
-                _WebFeatureCard(
-                  icon: Icons.build_circle_rounded,
-                  title: 'Weight Tuning',
-                  description: 'Assist customizers and technicians in precise lead tape placement to hit exact target MOI specifications.',
-                  iconBg: const Color(0xFFF0FDF4),
-                  iconColor: const Color(0xFF16A34A),
-                ),
-                _WebFeatureCard(
-                  icon: Icons.fact_check_rounded,
-                  title: 'Quality Control',
-                  description: 'Log batch production samples to assess manufacturing consistency and verify commercial specs.',
-                  iconBg: const Color(0xFFFFF7ED),
-                  iconColor: const Color(0xFFEA580C),
                 ),
                 _WebFeatureCard(
                   icon: Icons.sensors_rounded,

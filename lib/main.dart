@@ -444,6 +444,13 @@ class _OverviewContent extends StatelessWidget {
                   iconBg: const Color(0xFFF8FAFC),
                   iconColor: const Color(0xFF475569),
                 ),
+                _WebFeatureCard(
+                  icon: Icons.science_rounded,
+                  title: 'Physics-Informed Engine',
+                  description: 'Leverages a physics-informed, empirically developed estimation engine to model and calculate complex racquet dynamics.',
+                  iconBg: const Color(0xFFECFEFF),
+                  iconColor: const Color(0xFF0891B2),
+                ),
               ],
             );
           },

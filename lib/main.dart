@@ -251,7 +251,7 @@ class _WebMainScreenState extends State<WebMainScreen> {
               ),
               const SizedBox(height: 20),
               Text(
-                'OpenMOI is the official companion app for the physical paddle/racquet oscillator device. It uses smartphone motion sensors mounted on the device to calculate Moment of Inertia (MOI), Swing Weight (SW), and Twist Weight (TW).',
+                'OpenMOI is the official companion app for the physical paddle/racquet oscillator device. It uses smartphone motion sensors mounted on the device to calculate and estimate Moment of Inertia (MOI), Swing Weight (SW), and Twist Weight (TW).',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: isDesktop ? 18 : 16,
@@ -535,7 +535,7 @@ class _AndroidContent extends StatelessWidget {
                   children: [
                     const Text('Download Package', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color(0xFF0F172A))),
                     const SizedBox(height: 12),
-                    const Text('Install the standalone APK directly onto your Android phone or tablet device.', style: TextStyle(color: Color(0xFF475569), height: 1.5)),
+                    const Text('Install the standalone APK directly onto your Android phone.', style: TextStyle(color: Color(0xFF475569), height: 1.5)),
                     const SizedBox(height: 24),
                     SizedBox(
                       width: double.infinity,

@@ -283,13 +283,13 @@ class _WebMainScreenState extends State<WebMainScreen> {
               const SizedBox(height: 30),
               if (isDesktop)
                 Image.asset(
-                  'assets/images/device.jpg',
+                  'assets/images/device.png',
                   height: 300,
                   errorBuilder: (c, e, s) => const SizedBox(),
                 )
               else
                 Image.asset(
-                  'assets/images/device.jpg',
+                  'assets/images/device.png',
                   height: 200,
                   errorBuilder: (c, e, s) => const SizedBox(),
                 ),

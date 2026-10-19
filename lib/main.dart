@@ -251,7 +251,7 @@ class _WebMainScreenState extends State<WebMainScreen> {
               ),
               const SizedBox(height: 20),
               Text(
-                'OpenMOI is the official companion app for the physical paddle/racquet oscillator device. It uses smartphone motion sensors mounted on the device to calculate and estimate Moment of Inertia (MOI), Swing Weight (SW), and Twist Weight (TW).',
+                'OpenMOI is the official companion app for the physical paddle/racquet oscillator device. It uses smartphone motion sensors mounted on the device to calculate Moment of Inertia (MOI), Swing Weight (SW), and Twist Weight (TW). It can also be used as a standalone app to estimate these values.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: isDesktop ? 18 : 16,

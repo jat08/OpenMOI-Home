@@ -436,7 +436,7 @@ class _OverviewContent extends StatelessWidget {
                   iconColor: const Color(0xFF475569),
                 ),
                 _WebFeatureCard(
-                  icon: Icons.science_rounded,
+                  icon: Icons.functions_rounded,
                   title: 'Physics-Informed Engine',
                   description: 'Leverages a physics-informed, empirically developed estimation engine to model and calculate complex racquet dynamics.',
                   iconBg: const Color(0xFFECFEFF),
@@ -490,7 +490,7 @@ class _AndroidContent extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
               decoration: BoxDecoration(color: OpenMOIHomeApp.accentLightBg, borderRadius: BorderRadius.circular(8)),
-              child: const Text('RECOMMENDED PLATFORM', style: TextStyle(color: OpenMOIHomeApp.accentBlue, fontSize: 12, fontWeight: FontWeight.bold)),
+              child: const Text('RECOMMENDED PLATFORM FOR ANDROID USERS', style: TextStyle(color: OpenMOIHomeApp.accentBlue, fontSize: 12, fontWeight: FontWeight.bold)),
             ),
           ],
         ),
@@ -575,7 +575,8 @@ class _AndroidContent extends StatelessWidget {
                     const SizedBox(height: 8),
                     _buildTextStep('1. Tap download to save the APK to your device.'),
                     _buildTextStep('2. Open the downloaded file from notifications.'),
-                    _buildTextStep('3. Allow "Install from Unknown Sources" if prompted.'),
+                    _buildTextStep('3. Navigate to Settings > Security and Privacy and disable "Auto Blocker" (Samsung devices).'),
+                    _buildTextStep('4. Allow "Install from Unknown Sources" if prompted.'),
                   ],
                 ),
               ),
@@ -637,7 +638,7 @@ class _OnlineContent extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         const Text(
-          'The PWA version allows users on any device—including iOS (iPhones & iPads) and desktops—to quickly run measurements directly inside a web browser without installing native packages.',
+          'The PWA version allows users on Android and iPhones to quickly run measurements and make estimations directly inside a web browser without installing native packages.',
           style: TextStyle(fontSize: 18, color: Color(0xFF475569), height: 1.6),
         ),
         const SizedBox(height: 40),
@@ -645,24 +646,24 @@ class _OnlineContent extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(24),
           decoration: BoxDecoration(
-            color: const Color(0xFFFFFBF1),
-            border: Border.all(color: const Color(0xFFFDE68A)),
+            color: OpenMOIHomeApp.accentLightBg,
+            border: Border.all(color: OpenMOIHomeApp.accentBlue.withOpacity(0.3)),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Icon(Icons.warning_amber_rounded, color: Color(0xFFD97706), size: 28),
+              const Icon(Icons.info_outline_rounded, color: OpenMOIHomeApp.accentBlue, size: 28),
               const SizedBox(width: 16),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Browser Limitations to Consider', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF92400E))),
+                    const Text('Browser Limitations to Consider', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: OpenMOIHomeApp.accentBlue)),
                     const SizedBox(height: 12),
                     _buildWarningItem('Internet Dependency:', 'Requires an active web connection to load application files, unlike the offline Android app.'),
                     const SizedBox(height: 12),
-                    _buildWarningItem('Apple iOS Hardware Limits:', 'Web APIs introduce polling overhead. On Safari (iOS), strict sensor permission policies and throttled sample rates (30Hz–60Hz) can cause sampling jitter during high-frequency physical oscillations.'),
+                    _buildWarningItem('Apple iOS Hardware Limits:', 'Web APIs introduce polling overhead. On iOS browsers, strict sensor permission policies and throttled sample rates (30Hz–60Hz) can cause sampling jitter during high-frequency physical oscillations.'),
                   ],
                 ),
               ),
@@ -677,7 +678,7 @@ class _OnlineContent extends StatelessWidget {
             icon: const Icon(Icons.open_in_new_rounded, size: 22),
             label: const Text('Launch Online Web App (GitHub Pages)'),
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF1E293B),
+              backgroundColor: OpenMOIHomeApp.accentBlue,
               foregroundColor: Colors.white,
               padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 22),
               textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -693,7 +694,7 @@ class _OnlineContent extends StatelessWidget {
   Widget _buildWarningItem(String bold, String desc) {
     return RichText(
       text: TextSpan(
-        style: const TextStyle(fontSize: 15, color: Color(0xFF92400E), height: 1.5, fontFamily: 'Inter'),
+        style: const TextStyle(fontSize: 15, color: OpenMOIHomeApp.accentBlue, height: 1.5, fontFamily: 'Inter'),
         children: [
           TextSpan(text: '$bold ', style: const TextStyle(fontWeight: FontWeight.bold)),
           TextSpan(text: desc),

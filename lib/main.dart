@@ -81,26 +81,20 @@ class _WebMainScreenState extends State<WebMainScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   // Logo / Brand
-                  MouseRegion(
-                    cursor: SystemMouseCursors.click,
-                    child: GestureDetector(
-                      onTap: () => _navigateTo(0),
-                      child: Row(
-                        children: [
-                          Image.asset('assets/images/logo.png', width: 44, height: 44, fit: BoxFit.contain, errorBuilder: (c, e, s) => const Icon(Icons.sports_tennis_rounded, color: OpenMOIHomeApp.accentBlue, size: 28)),
-                          const SizedBox(width: 10),
-                          const Text(
-                            'OpenMOI',
-                            style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF1E293B),
-                              letterSpacing: -0.5,
-                            ),
-                          ),
-                        ],
+                  Row(
+                    children: [
+                      Image.asset('assets/images/logo.png', width: 44, height: 44, fit: BoxFit.contain, errorBuilder: (c, e, s) => const Icon(Icons.sports_tennis_rounded, color: OpenMOIHomeApp.accentBlue, size: 28)),
+                      const SizedBox(width: 10),
+                      const Text(
+                        'OpenMOI',
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF1E293B),
+                          letterSpacing: -0.5,
+                        ),
                       ),
-                    ),
+                    ],
                   ),
 
                   // Desktop Navigation Links
@@ -351,22 +345,18 @@ class _WebMainScreenState extends State<WebMainScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Row(
-                    children: [
-                      Icon(Icons.sports_tennis_rounded, color: Color(0xFF94A3B8), size: 20),
-                      SizedBox(width: 8),
-                      Text(
-                        '2026 OpenMOI Project.',
-                        style: TextStyle(color: Color(0xFF64748B), fontSize: 14),
-                      ),
-                    ],
-                  ),
                   Row(
                     children: [
-                      IconButton(
-                        icon: const Icon(Icons.code_rounded, color: Color(0xFF94A3B8)),
-                        onPressed: () {}, // Optional github link
-                        tooltip: 'Source Code',
+                      Image.asset(
+                        'assets/images/logo.png',
+                        width: 20,
+                        height: 20,
+                        errorBuilder: (c, e, s) => const Icon(Icons.sports_tennis_rounded, color: Color(0xFF94A3B8), size: 20),
+                      ),
+                      const SizedBox(width: 8),
+                      const Text(
+                        '2026 OpenMOI Project.',
+                        style: TextStyle(color: Color(0xFF64748B), fontSize: 14),
                       ),
                     ],
                   ),

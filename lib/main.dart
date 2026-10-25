@@ -632,7 +632,7 @@ class _OnlineContent extends StatelessWidget {
           child: ElevatedButton.icon(
             onPressed: _launchOnlineTool,
             icon: const Icon(Icons.open_in_new_rounded, size: 22),
-            label: const Text('Launch Online Web App (GitHub Pages)'),
+            label: const Text('Launch Online Web App'),
             style: ElevatedButton.styleFrom(
               backgroundColor: OpenMOIHomeApp.accentBlue,
               foregroundColor: Colors.white,
@@ -647,7 +647,7 @@ class _OnlineContent extends StatelessWidget {
 
         // PWA Installation & Offline Support Card
         Container(
-          padding: const EdgeInsets.all(28),
+          padding: EdgeInsets.all(isDesktop ? 28 : 20),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(16),
@@ -660,12 +660,15 @@ class _OnlineContent extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: const [
                   Icon(Icons.install_mobile_rounded, color: OpenMOIHomeApp.accentBlue, size: 28),
                   SizedBox(width: 12),
-                  Text(
-                    'PWA Installation & Offline Functionality',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color(0xFF0F172A)),
+                  Expanded(
+                    child: Text(
+                      'PWA Installation & Offline Functionality',
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color(0xFF0F172A)),
+                    ),
                   ),
                 ],
               ),
@@ -707,13 +710,14 @@ class _OnlineContent extends StatelessWidget {
                           children: const [
                             Icon(Icons.android_rounded, color: Color(0xFF3DDC84), size: 20),
                             SizedBox(width: 8),
-                            Text('Android (Chrome / Edge)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF1E293B))),
+                            Expanded(
+                              child: Text('Android (Chrome / Samsung Internet)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF1E293B))),
+                            ),
                           ],
                         ),
                         const SizedBox(height: 10),
-                        _buildTextStep('1. Open the web app link in Chrome.'),
-                        _buildTextStep('2. Tap the Menu icon (3 vertical dots) in the top right.'),
-                        _buildTextStep('3. Select "Add to Home screen" or "Install app".'),
+                        _buildTextStep('• Chrome: Tap Menu (3 dots in top right) > "Add to Home screen" or "Install app".'),
+                        _buildTextStep('• Samsung Internet: Tap Menu (3 lines in bottom right) > "Add page to" > "App screen" or "Home screen".'),
                       ],
                     ),
                   ),
@@ -728,13 +732,14 @@ class _OnlineContent extends StatelessWidget {
                           children: const [
                             Icon(Icons.apple_rounded, color: Color(0xFF000000), size: 20),
                             SizedBox(width: 8),
-                            Text('iOS (Safari)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF1E293B))),
+                            Expanded(
+                              child: Text('iOS (Safari / Chrome)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF1E293B))),
+                            ),
                           ],
                         ),
                         const SizedBox(height: 10),
-                        _buildTextStep('1. Open the web app link in Safari.'),
-                        _buildTextStep('2. Tap the Share button (square with arrow pointing up).'),
-                        _buildTextStep('3. Scroll down and select "Add to Home Screen".'),
+                        _buildTextStep('• Safari: Tap Share button (square with arrow) > scroll down & tap "Add to Home Screen".'),
+                        _buildTextStep('• Chrome: Tap Share button (in address bar/menu) > scroll down & tap "Add to Home Screen".'),
                       ],
                     ),
                   ),

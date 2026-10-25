@@ -626,6 +626,123 @@ class _OnlineContent extends StatelessWidget {
           'The PWA version allows users on Android and iPhones to quickly run measurements and make estimations directly inside a web browser without installing native packages.',
           style: TextStyle(fontSize: 18, color: Color(0xFF475569), height: 1.6),
         ),
+        const SizedBox(height: 32),
+
+        Center(
+          child: ElevatedButton.icon(
+            onPressed: _launchOnlineTool,
+            icon: const Icon(Icons.open_in_new_rounded, size: 22),
+            label: const Text('Launch Online Web App (GitHub Pages)'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: OpenMOIHomeApp.accentBlue,
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 22),
+              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              elevation: 0,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            ),
+          ),
+        ),
+        const SizedBox(height: 40),
+
+        // PWA Installation & Offline Support Card
+        Container(
+          padding: const EdgeInsets.all(28),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: const Color(0xFFE2E8F0)),
+            boxShadow: const [
+              BoxShadow(color: Color.fromRGBO(0, 0, 0, 0.03), blurRadius: 10, offset: Offset(0, 4)),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: const [
+                  Icon(Icons.install_mobile_rounded, color: OpenMOIHomeApp.accentBlue, size: 28),
+                  SizedBox(width: 12),
+                  Text(
+                    'PWA Installation & Offline Functionality',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color(0xFF0F172A)),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+              Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFF0FDF4),
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: const Color(0xFFBBF7D0)),
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Icon(Icons.wifi_off_rounded, color: Color(0xFF16A34A), size: 22),
+                    SizedBox(width: 12),
+                    Expanded(
+                      child: Text(
+                        'Offline Caching: Once opened or installed, the web app caches all required application files locally on your device. You can run measurements completely offline on subsequent uses without an internet connection.',
+                        style: TextStyle(fontSize: 14, color: Color(0xFF166534), height: 1.5),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 24),
+              const Text('Optional Installation Instructions:', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Color(0xFF0F172A))),
+              const SizedBox(height: 16),
+              Flex(
+                direction: isDesktop ? Axis.horizontal : Axis.vertical,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    flex: isDesktop ? 1 : 0,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: const [
+                            Icon(Icons.android_rounded, color: Color(0xFF3DDC84), size: 20),
+                            SizedBox(width: 8),
+                            Text('Android (Chrome / Edge)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF1E293B))),
+                          ],
+                        ),
+                        const SizedBox(height: 10),
+                        _buildTextStep('1. Open the web app link in Chrome.'),
+                        _buildTextStep('2. Tap the Menu icon (3 vertical dots) in the top right.'),
+                        _buildTextStep('3. Select "Add to Home screen" or "Install app".'),
+                      ],
+                    ),
+                  ),
+                  if (isDesktop) const SizedBox(width: 32),
+                  if (!isDesktop) const SizedBox(height: 20),
+                  Expanded(
+                    flex: isDesktop ? 1 : 0,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: const [
+                            Icon(Icons.apple_rounded, color: Color(0xFF000000), size: 20),
+                            SizedBox(width: 8),
+                            Text('iOS (Safari)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF1E293B))),
+                          ],
+                        ),
+                        const SizedBox(height: 10),
+                        _buildTextStep('1. Open the web app link in Safari.'),
+                        _buildTextStep('2. Tap the Share button (square with arrow pointing up).'),
+                        _buildTextStep('3. Scroll down and select "Add to Home Screen".'),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
         const SizedBox(height: 40),
 
         Container(
@@ -646,7 +763,7 @@ class _OnlineContent extends StatelessWidget {
                   children: [
                     const Text('Browser Limitations to Consider', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: OpenMOIHomeApp.accentBlue)),
                     const SizedBox(height: 12),
-                    _buildWarningItem('Internet Dependency:', 'Requires an active web connection to load application files, unlike the offline Android app.'),
+                    _buildWarningItem('Initial Connection:', 'Requires an initial web connection to load and cache application files; works fully offline afterwards.'),
                     const SizedBox(height: 12),
                     _buildWarningItem('Apple iOS Hardware Limits:', 'Web APIs introduce polling overhead. On iOS browsers, strict sensor permission policies and throttled sample rates (30Hz–60Hz) can cause sampling jitter during high-frequency physical oscillations.'),
                   ],
@@ -655,24 +772,14 @@ class _OnlineContent extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: 40),
-
-        Center(
-          child: ElevatedButton.icon(
-            onPressed: _launchOnlineTool,
-            icon: const Icon(Icons.open_in_new_rounded, size: 22),
-            label: const Text('Launch Online Web App (GitHub Pages)'),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: OpenMOIHomeApp.accentBlue,
-              foregroundColor: Colors.white,
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 22),
-              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              elevation: 0,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-            ),
-          ),
-        ),
       ],
+    );
+  }
+
+  Widget _buildTextStep(String text) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 6.0),
+      child: Text(text, style: const TextStyle(fontSize: 13, color: Color(0xFF475569))),
     );
   }
 
